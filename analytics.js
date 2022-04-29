@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+function script () {
     const newP = document.createElement("p");
     const pContent = document.createTextNode("Second script worked!!");
     newP.appendChild(pContent);
@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
     setCookie('message', 'Hello World!', 3);
     const messageCookie = getCookie('message');
     console.log(messageCookie);
-});
+}
 
 function setCookie(name,value,days) {
     let expires = "";
@@ -33,3 +33,5 @@ function getCookie(name) {
 function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
+
+script();
